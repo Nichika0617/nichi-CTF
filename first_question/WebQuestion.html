@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>[Web] Question1</title>
+    <title>[Web] JS is difficult</title>
 </head>
 
 <body>
     
     <p class="title">Question</p>
+    <p style="text-align: center; padding-bottom: 50px;">※半角と全角を区別します．</p>
     <p style="text-align: center; display: none;" id="subTitle">[Web] Is This JavaScript？</p>
     <p style="text-align: center; font-size: 30px;" id="firstContent">6 + 1 = ?</p>
     <form>
@@ -34,11 +35,15 @@
     const SubmitClick = ()=> {
         const input = document.getElementById("answer").value;
         // console.log(input)
-        if (input == 7 & inputSeven_count == 0){
-            alert("正解！！ここからが本番！")
-            inputSeven_count+=1
-            document.getElementById("secondContent").style.display ="";
-            document.getElementById("firstContent").style.display ="none";
+        if (input == 7){
+            if(inputSeven_count == 0){
+                alert("正解..?  新たな暗号が出てきた．")
+                inputSeven_count+=1
+                document.getElementById("secondContent").style.display ="";
+                document.getElementById("firstContent").style.display ="none";
+            }else{
+                alert("6+1 = 7 ... 覚えやすいな〜")
+            }
         }
         else if(input == "hint" || input == "Hint" || input == "ヒント"){
             document.getElementById("hint").style.display ="";
@@ -47,6 +52,9 @@
         }
         else if(input == "happybirthday"){
             // QRコードの処理書く
+        }
+        else if(input == ""){
+            alert("なんだろう・・")
         }
         else{
             alert("間違い！")
