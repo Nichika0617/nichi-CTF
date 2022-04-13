@@ -1,4 +1,5 @@
 <!-- デベロッパーツール．この中に何かが．．？ -->
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,11 +13,11 @@
 <body>
     
     <p class="title">Question</p>
-    <!-- <p style="text-align: center;">[Web] Is This JavaScript？</p> -->
+    <p style="text-align: center; display: none;" id="subTitle">[Web] Is This JavaScript？</p>
     <p style="text-align: center; font-size: 30px;" id="firstContent">6 + 1 = ?</p>
     <form>
         <input type="text" id="answer">
-        <input type="button" value="送信" id="submit" onclick="SubmitClick();" onkeydown="submitCheck();">
+        <input type="button" value="送信" id="submit" onclick="SubmitClick();">
     </form>
     <div class="hint" id="hint" style="display: none;">
         <button class="link-style-btn" onclick="firstHint()">Hint1</button>
@@ -32,18 +33,21 @@
     inputSeven_count=0
     const SubmitClick = ()=> {
         const input = document.getElementById("answer").value;
-        console.log(input)
+        // console.log(input)
         if (input == 7 & inputSeven_count == 0){
-            alert("正解！！次の暗号を表示するよ！")
+            alert("正解！！ここからが本番！")
             inputSeven_count+=1
             document.getElementById("secondContent").style.display ="";
             document.getElementById("firstContent").style.display ="none";
         }
         else if(input == "hint" || input == "Hint" || input == "ヒント"){
             document.getElementById("hint").style.display ="";
+            document.getElementById("subTitle").style.display ="";
+            document.getElementById("firstContent").style.display ="none";
         }
         else{
             alert("間違い！")
+            printAnswer()
         }
         document.getElementById("answer").value = "";
         
@@ -61,12 +65,30 @@
     
     const thirdHint = () => {
         text = "JUUzJTgxJTkzJUUzJTgxJTkzJUUzJTgxJThCJUUzJTgyJTg5JUU1JUJFJUE5JUU1JTg1JTgzJUUzJTgxJUE3JUUzJTgxJThEJUUzJTgyJThCJUUzJTgxJUJGJUUzJTgxJTlGJUUzJTgxJTg0Li4lM0YlMEElMjBodHRwcyUzQSUyRiUyRmJlYXV0aWZpZXIuaW8lMkY="
-        alert("ん..?どこかにヒントが表示されたのかな..")
+        alert("ん..?この画面には変化がない．どこかにヒントが表示されたのだろうか..")
         console.log(decodeURIComponent(atob(btoa(encodeURIComponent(decodeURIComponent(atob(text)))))))
     }
 
-    const printAnswer = () =>{
-        
+    const printAnswer = () => {
+        // 答えを出力する関数
+        let beforeDisplaceStr = "a";
+        let displaceCount = 617;
+        let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+        let afterDisplaceStr = "";
+        displaceCount = displaceCount % 26;
+        for (let i = 0; i < beforeDisplaceStr.length; i++) {
+            let target = beforeDisplaceStr[i];
+            let targetIndex = alphabet.indexOf(target);
+            let afterDisplaceIndex = targetIndex + displaceCount;
+            if (afterDisplaceIndex > 25) {
+                afterDisplaceIndex = afterDisplaceIndex - 26
+            }
+            if (afterDisplaceIndex < 0) {
+                afterDisplaceIndex = afterDisplaceIndex + 26
+            }
+            afterDisplaceStr += alphabet[afterDisplaceIndex]
+        }
+        console.log(afterDisplaceStr)
     }
 </script>
 </html>
