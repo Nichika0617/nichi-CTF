@@ -30,9 +30,10 @@
     </div>
     <div id="lastMessage" style="text-align: center;">
         <!-- html覗かれると真っ先にここに飛んでこられそう.. -->
+    </div>
+    <div style="display: none;text-align: center;" id="hint4">
         <button class="link-style-btn" onclick="fourthHint()">Hint4</button>
     </div>
-    
 </body>
 
 <script>
@@ -68,6 +69,7 @@ document.onkeypress = function(e) {
             alert("怪しい画像が出てきた..!")
             document.getElementById("inputForm").innerHTML = "<input type='text' id='answer' placeholder = 'Congratulations!'>"
             document.getElementById("lastMessage").innerHTML ="<img src='./message.png' alt='メッセージ' title='メッセージ'>"
+            document.getElementById("hint4").style.display ="";
         }
         else if(input == ""){
             alert("なんだろう・・")
@@ -92,7 +94,8 @@ document.onkeypress = function(e) {
     }
 
     const fourthHint = () => {
-        // まだ
+        const text = "JUUzJTgxJTkzJUUzJTgyJThDJUUzJTgxJUFGLi5RUiVFMyU4MiVCMyVFMyU4MyVCQyVFMyU4MyU4OSUzRiUwQSVFMyU4MSVBNyVFMyU4MiU4MiVFMyU4MSU4NCVFMyU4MSVBNCVFMyU4MiU4MiVFOCVBNiU4QiVFMyU4MSVBNiVFMyU4MSU4NCVFMyU4MiU4QiVFMyU4MiU4MiVFMyU4MSVBRSVFMyU4MSVBOCVFMyU4MSVBRiVFNCVCRCU5NSVFMyU4MSU4QiVFOSU4MSU5NSVFMyU4MSU4NiVFMyU4MiU4OCVFMyU4MSU4NiVFMyU4MSVBQS4u";
+        alert(decodeURIComponent(atob(btoa(encodeURIComponent(decodeURIComponent(atob(text)))))));
     }
     const printAnswer = () => {
         // 答えを出力する関数
