@@ -1,0 +1,74 @@
+<!-- デベロッパーツール．この中に何かが．．？ -->
+<!-- ※ github repositories覗くと色々分っちゃうので最終手段にしてください.. -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>[Web] JS is difficult</title>
+</head>
+
+<body>
+    <p class="title">Question</p>
+    <p style="text-align: center; padding-bottom: 50px;">※半角と全角を区別します．</p>
+    <p style="text-align: center; display: none;" id="subTitle">[Web] Is this JavaScript？</p>
+    <p style="text-align: center; font-size: 30px;" id="firstContent">6 + 1 = ?</p>
+    <form id="inputForm">
+        <input type="text" id="answer">
+        <input type="button" value="送信" id="submit" onclick="SubmitClick();">
+    </form>
+    
+    <div class="hint" id="hint" style="display: none;">
+        <button class="link-style-btn" onclick="firstHint()">Hint1</button>
+        <button class="link-style-btn" onclick="secondHint()">Hint2</button>
+        <button class="link-style-btn" onclick="thirdHint()">Hint3</button>
+    </div>    
+    <p class=secondContent id=secondContent style="display: none;">5paH5a2X5YyW44GR44GX44Gq44GE44GL5bCR44GX5b+D6YWN44Gn44GZ44GM77yO77yOCmJhc2U2NOOBo+OBpuOBi+OBo+OBk+OBhOOBhOOBp+OBmeOCiOOBre+8jgox5bm05YmN44Gu5pqX5Y+344Gv44GT44GuYmFzZTY044Gn44Ko44Oz44Kz44O844OJ44GX44Gf44KC44Gu44Gn44GX44Gf77yOCuOBguOCk+OBvuOCiuODhOOCpOODvOODiOOBl+OBquOBhOOBruOBp+WwkeOBl+mBoeOCi+OBqOimi+OBpOOBi+OCi+OBi+OBquOBqO+8ju+8ju+8gQoKMeW5tOWJjeOCguOBk+OBrumBiuOBs+OBq+S7mOOBjeWQiOOBo+OBpuOBj+OCjOOBn+aWueOBr+OBiuS5heOBl+OBtuOCiuOBp+OBme+8juS7iuW5tOOCguOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBme+8jgrjgafjgZnjgYzvvIzku4rlubTjga/jgZPjgozjgafntYLjgo/jgorjgafjga/jgYLjgorjgb7jgZvjgpPvvI7vvI7vvIEKCuOBk+OBruODmuODvOOCuOOBruS4reOBq+OBr++8jOOBleOCieOBq+etlOOBiOOBq+OBpOOBquOBjOOCi+OCguOBruOBjOmaoOOBleOCjOOBpuOBhOOCi+OBi+OCguODu+ODu++8nwoK4oC744CMaGludOOAjeOBqOWFpeWKm+OBl+OBpumAgeS/oeODnOOCv+ODs+OCkuOCr+ODquODg+OCr+OBmeOCi+OBqOODkuODs+ODiOOBjOihqOekuuOBleOCjOOBvuOBme+8jg==</p>    
+    </div>
+    <div id="lastMessage" style="text-align: center;">
+        <!-- html覗かれると真っ先にここに飛んでこられそうなので隠します.. -->
+    </div>
+    <div style="display: none;text-align: center;" id="hint4">
+        <button class="link-style-btn" onclick="fourthHint()">Hint4</button>
+    </div>
+</body>
+
+<script>
+document.onkeypress = function(e) {
+  // エンターキーはサイト全体で無視
+  if (e.key === 'Enter') {
+    return false;
+  }
+}
+
+    inputSeven_count=0
+    const SubmitClick = ()=> {
+        function _0x2abe(){const _0x5703cc=['なんだろう・・','innerHTML','間違い！','lastMessage','hint','18842vzmaNS','30727257ouRIDb','<input\x20type=\x27text\x27\x20id=\x27answer\x27\x20placeholder\x20=\x20\x27Congratulations!\x27>','ヒント','3828060dsCVVV','happybirthday','display','value','hint4','27FpFUYZ','4smWTBX','getElementById','style','1837578oxoyBK','怪しい画像が出てきた..!','1538152JzpVJf','none','<img\x20src=\x27./message.png\x27\x20alt=\x27メッセージ\x27\x20title=\x27メッセージ\x27>','1666842izDxhg','answer','65xwSoai','secondContent','Hint','7NGGUKR','2537970bOQxSX','firstContent','6+1\x20=\x207\x20...\x20覚えやすいな〜'];_0x2abe=function(){return _0x5703cc;};return _0x2abe();}function _0x14d2(_0x24676d,_0x4c13f3){const _0x2abe0f=_0x2abe();return _0x14d2=function(_0x14d214,_0x4d5288){_0x14d214=_0x14d214-0xff;let _0x39de4b=_0x2abe0f[_0x14d214];return _0x39de4b;},_0x14d2(_0x24676d,_0x4c13f3);}const _0x429ffd=_0x14d2;(function(_0x1d3608,_0x179f4e){const _0x10267c=_0x14d2,_0x38bead=_0x1d3608();while(!![]){try{const _0x4c6122=parseInt(_0x10267c(0x10e))/0x1*(-parseInt(_0x10267c(0x11a))/0x2)+-parseInt(_0x10267c(0x107))/0x3*(parseInt(_0x10267c(0x104))/0x4)+-parseInt(_0x10267c(0x112))/0x5+parseInt(_0x10267c(0x10c))/0x6*(parseInt(_0x10267c(0x111))/0x7)+parseInt(_0x10267c(0x109))/0x8*(-parseInt(_0x10267c(0x103))/0x9)+-parseInt(_0x10267c(0x11e))/0xa+parseInt(_0x10267c(0x11b))/0xb;if(_0x4c6122===_0x179f4e)break;else _0x38bead['push'](_0x38bead['shift']());}catch(_0x7ff073){_0x38bead['push'](_0x38bead['shift']());}}}(_0x2abe,0x5c8d8));const input=document[_0x429ffd(0x105)](_0x429ffd(0x10d))[_0x429ffd(0x101)];if(input==0x7)inputSeven_count==0x0?(alert('正解..?\x20\x20新たな暗号が出てきた．'),inputSeven_count+=0x1,document['getElementById'](_0x429ffd(0x10f))[_0x429ffd(0x106)][_0x429ffd(0x100)]='',document[_0x429ffd(0x105)](_0x429ffd(0x113))[_0x429ffd(0x106)]['display']=_0x429ffd(0x10a)):alert(_0x429ffd(0x114));else{if(input=='hint'||input==_0x429ffd(0x110)||input==_0x429ffd(0x11d))document['getElementById'](_0x429ffd(0x119))[_0x429ffd(0x106)][_0x429ffd(0x100)]='',document[_0x429ffd(0x105)]('subTitle')[_0x429ffd(0x106)][_0x429ffd(0x100)]='',document[_0x429ffd(0x105)](_0x429ffd(0x113))[_0x429ffd(0x106)][_0x429ffd(0x100)]='none';else{if(input==_0x429ffd(0xff))document[_0x429ffd(0x105)]('secondContent')[_0x429ffd(0x106)][_0x429ffd(0x100)]=_0x429ffd(0x10a),alert(_0x429ffd(0x108)),document[_0x429ffd(0x105)]('inputForm')[_0x429ffd(0x116)]=_0x429ffd(0x11c),document[_0x429ffd(0x105)](_0x429ffd(0x118))[_0x429ffd(0x116)]=_0x429ffd(0x10b),document['getElementById'](_0x429ffd(0x102))['style'][_0x429ffd(0x100)]='';else input==''?alert(_0x429ffd(0x115)):alert(_0x429ffd(0x117));}}document[_0x429ffd(0x105)](_0x429ffd(0x10d))[_0x429ffd(0x101)]='';
+    }
+
+    const firstHint = () => {
+        const _0x3bcf1c=_0x41e4;(function(_0x25c1ad,_0x3f882f){const _0x57cd23=_0x41e4,_0x5b7917=_0x25c1ad();while(!![]){try{const _0x24b227=parseInt(_0x57cd23(0xb8))/0x1+parseInt(_0x57cd23(0xb4))/0x2+-parseInt(_0x57cd23(0xaf))/0x3*(-parseInt(_0x57cd23(0xb7))/0x4)+-parseInt(_0x57cd23(0xb9))/0x5*(-parseInt(_0x57cd23(0xb6))/0x6)+parseInt(_0x57cd23(0xb2))/0x7*(parseInt(_0x57cd23(0xb0))/0x8)+-parseInt(_0x57cd23(0xb3))/0x9*(parseInt(_0x57cd23(0xae))/0xa)+-parseInt(_0x57cd23(0xb5))/0xb*(parseInt(_0x57cd23(0xad))/0xc);if(_0x24b227===_0x3f882f)break;else _0x5b7917['push'](_0x5b7917['shift']());}catch(_0x46e2a5){_0x5b7917['push'](_0x5b7917['shift']());}}}(_0x3eaa,0x3befb));function _0x3eaa(){const _0x157e50=['5Tnwguj','12331212zhxBJv','1419040pVzLHP','433383ANwvIA','31832moixuL','JUUzJTgzJTg3JUUzJTgzJTk5JUUzJTgzJUFEJUUzJTgzJTgzJUUzJTgzJTkxJUUzJTgzJUJDJUUzJTgzJTg0JUUzJTgzJUJDJUUzJTgzJUFCKCVFOSU5NiU4QiVFNyU5OSVCQSVFOCU4MCU4NSVFMyU4MyU4NCVFMyU4MyVCQyVFMyU4MyVBQiklRTMlODIlOTIlRTklOTYlOEIlRTMlODElOEYlRTMlODElQTglRTQlQkQlOTUlRTMlODElOEIlRTMlODElODIlRTMlODIlOEIlRTMlODElOEIlRTMlODIlODIlRUYlQkMlOEU=','455sRWwhO','9SEfzom','398614OqeWCl','11mmzgVH','2645418qPTVoF','4LoRjOw','371698GvCoTj'];_0x3eaa=function(){return _0x157e50;};return _0x3eaa();}function _0x41e4(_0x57dc9d,_0x3faa7e){const _0x3eaa50=_0x3eaa();return _0x41e4=function(_0x41e4bf,_0xf8bc20){_0x41e4bf=_0x41e4bf-0xad;let _0x5c85ff=_0x3eaa50[_0x41e4bf];return _0x5c85ff;},_0x41e4(_0x57dc9d,_0x3faa7e);}const text=_0x3bcf1c(0xb1);alert(decodeURIComponent(atob(btoa(encodeURIComponent(decodeURIComponent(atob(text)))))));
+    }
+
+    const secondHint = () => {
+        function _0x189d(){const _0x9c1a6f=['1948686oXcaKh','798385snrSiq','4086aNgyIC','SmF2YVNjcmlwdCVFOSU5QiVBMyVFOCVBQSVBRCVFNSU4QyU5NiUyMCVFMyU4MCU4QyUyRnBhY2tlciUyRiVFMyU4MCU4RA==','23818vahwTC','8358XdbJfC','44RiuRPI','6522220TjbvjT','9463421UwVyyp','4MxelXG','8tNWKVO','12wqOWPg','679UcEwrt'];_0x189d=function(){return _0x9c1a6f;};return _0x189d();}function _0x412d(_0xbffe11,_0x584e9d){const _0x189d1e=_0x189d();return _0x412d=function(_0x412d75,_0x1fd289){_0x412d75=_0x412d75-0xe5;let _0x5347c4=_0x189d1e[_0x412d75];return _0x5347c4;},_0x412d(_0xbffe11,_0x584e9d);}const _0x59d3b6=_0x412d;(function(_0xe9d1b8,_0x261a37){const _0x4b071f=_0x412d,_0xe02548=_0xe9d1b8();while(!![]){try{const _0x2cee71=-parseInt(_0x4b071f(0xee))/0x1*(parseInt(_0x4b071f(0xf0))/0x2)+-parseInt(_0x4b071f(0xea))/0x3+-parseInt(_0x4b071f(0xe6))/0x4*(-parseInt(_0x4b071f(0xeb))/0x5)+-parseInt(_0x4b071f(0xef))/0x6*(parseInt(_0x4b071f(0xe9))/0x7)+parseInt(_0x4b071f(0xe7))/0x8*(-parseInt(_0x4b071f(0xec))/0x9)+parseInt(_0x4b071f(0xf1))/0xa+parseInt(_0x4b071f(0xe5))/0xb*(parseInt(_0x4b071f(0xe8))/0xc);if(_0x2cee71===_0x261a37)break;else _0xe02548['push'](_0xe02548['shift']());}catch(_0x116654){_0xe02548['push'](_0xe02548['shift']());}}}(_0x189d,0x58a45));const text=_0x59d3b6(0xed);alert(decodeURIComponent(atob(btoa(encodeURIComponent(decodeURIComponent(atob(text)))))));
+    }
+    
+    const thirdHint = () => {
+        const _0x22560a=_0x38ff;(function(_0x3e830c,_0x2f0148){const _0x592667=_0x38ff,_0x404e2b=_0x3e830c();while(!![]){try{const _0x2e759b=parseInt(_0x592667(0x1bf))/0x1*(-parseInt(_0x592667(0x1c0))/0x2)+parseInt(_0x592667(0x1c5))/0x3*(parseInt(_0x592667(0x1c9))/0x4)+parseInt(_0x592667(0x1c1))/0x5+parseInt(_0x592667(0x1c4))/0x6*(parseInt(_0x592667(0x1c8))/0x7)+parseInt(_0x592667(0x1bd))/0x8*(parseInt(_0x592667(0x1c2))/0x9)+parseInt(_0x592667(0x1c3))/0xa+-parseInt(_0x592667(0x1c7))/0xb;if(_0x2e759b===_0x2f0148)break;else _0x404e2b['push'](_0x404e2b['shift']());}catch(_0x46fbbb){_0x404e2b['push'](_0x404e2b['shift']());}}}(_0x58f5,0x4562d));function _0x58f5(){const _0x1bcf8f=['1248036vzThQX','54MTyjLi','JUUzJTgyJTkzLi4lM0YlRTMlODElOTMlRTMlODElQUUlRTclOTQlQkIlRTklOUQlQTIlRTMlODElQUIlRTMlODElQUYlRTUlQTQlODklRTUlOEMlOTYlRTMlODElOEMlRTMlODElQUElRTMlODElODQlRUYlQkMlOEUlRTMlODElQTklRTMlODElOTMlRTMlODElOEIlRTMlODElQUIlRTMlODMlOTIlRTMlODMlQjMlRTMlODMlODglRTMlODElOEMlRTglQTElQTglRTclQTQlQkElRTMlODElOTUlRTMlODIlOEMlRTMlODElOUYlRTMlODElQUUlRTMlODElQTAlRTMlODIlOEQlRTMlODElODYlRTMlODElOEIuLg==','9046587VTKaJC','14gYWhzx','15068RMIgcr','log','8xxlrwN','JUUzJTgxJTkzJUUzJTgxJTkzJUUzJTgxJThCJUUzJTgyJTg5JUU1JUJFJUE5JUU1JTg1JTgzJUUzJTgxJUE3JUUzJTgxJThEJUUzJTgyJThCJUUzJTgxJUJGJUUzJTgxJTlGJUUzJTgxJTg0Li4lM0YlMEElMjBodHRwcyUzQSUyRiUyRmJlYXV0aWZpZXIuaW8lMkY=','3vKwXTE','14444GBTKYT','918905AOBSQa','1464597RKjcGO','2979560LwrMsy'];_0x58f5=function(){return _0x1bcf8f;};return _0x58f5();}function _0x38ff(_0x1eabf9,_0x55bb28){const _0x58f545=_0x58f5();return _0x38ff=function(_0x38ff6b,_0x48f25b){_0x38ff6b=_0x38ff6b-0x1bc;let _0x11c089=_0x58f545[_0x38ff6b];return _0x11c089;},_0x38ff(_0x1eabf9,_0x55bb28);}const hint=_0x22560a(0x1c6),text=_0x22560a(0x1be);alert(decodeURIComponent(atob(btoa(encodeURIComponent(decodeURIComponent(atob(hint))))))),console[_0x22560a(0x1bc)](decodeURIComponent(atob(btoa(encodeURIComponent(decodeURIComponent(atob(text)))))));
+    }
+
+    const fourthHint = () => {
+        function _0x3100(){const _0xc46583=['2685291OtVWfN','1063315BedIRC','90weNWbJ','26865bYdGxg','8ceAFyl','4555470qjBsUM','96XpMmPC','363117bGpYmW','4bEukiA','48qQWVsC','239385HINbIR','JUUzJTgxJTkzJUUzJTgyJThDJUUzJTgxJUFGLi5RUiVFMyU4MiVCMyVFMyU4MyVCQyVFMyU4MyU4OSUzRiUwQSVFMyU4MSVBNyVFMyU4MiU4MiVFMyU4MSU4NCVFMyU4MSVBNCVFMyU4MiU4MiVFOCVBNiU4QiVFMyU4MSVBNiVFMyU4MSU4NCVFMyU4MiU4QiVFMyU4MiU4MiVFMyU4MSVBRSVFMyU4MSVBOCVFMyU4MSVBRiVFNCVCRCU5NSVFMyU4MSU4QiVFOSU4MSU5NSVFMyU4MSU4NiVFMyU4MiU4OCVFMyU4MSU4NiVFMyU4MSVBQS4u','976473wMYVct'];_0x3100=function(){return _0xc46583;};return _0x3100();}function _0x5566(_0x34d858,_0x2585e0){const _0x31006e=_0x3100();return _0x5566=function(_0x556664,_0x576a7e){_0x556664=_0x556664-0x14e;let _0x263c3f=_0x31006e[_0x556664];return _0x263c3f;},_0x5566(_0x34d858,_0x2585e0);}const _0x255459=_0x5566;(function(_0x2f87c8,_0x3c9b75){const _0x25d51a=_0x5566,_0xa3185=_0x2f87c8();while(!![]){try{const _0x59a34f=-parseInt(_0x25d51a(0x156))/0x1*(-parseInt(_0x25d51a(0x157))/0x2)+-parseInt(_0x25d51a(0x159))/0x3+-parseInt(_0x25d51a(0x155))/0x4*(parseInt(_0x25d51a(0x152))/0x5)+-parseInt(_0x25d51a(0x154))/0x6+parseInt(_0x25d51a(0x14f))/0x7*(-parseInt(_0x25d51a(0x153))/0x8)+parseInt(_0x25d51a(0x14e))/0x9*(parseInt(_0x25d51a(0x151))/0xa)+parseInt(_0x25d51a(0x150))/0xb*(parseInt(_0x25d51a(0x158))/0xc);if(_0x59a34f===_0x3c9b75)break;else _0xa3185['push'](_0xa3185['shift']());}catch(_0x36c19b){_0xa3185['push'](_0xa3185['shift']());}}}(_0x3100,0xb41e2));const text=_0x255459(0x15a);alert(decodeURIComponent(atob(btoa(encodeURIComponent(decodeURIComponent(atob(text)))))));
+    }
+    // _________________________________________________________
+    const printAnswer = () => {
+        // 答えを出力する関数
+        eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1 4=(隠されていて読めない...);1 3=b;1 5="c".d("");1 6="";3=3%7;e(1 i=0;i<4.f;i++){1 8=4[i];1 9=5.g(8);1 2=9+3;a(2>h){2=2-7}a(2<0){2=2+7}6+=5[2]}j.k(6)',21,21,'|let|afterDisplaceIndex|displaceCount|beforeDisplaceStr|alphabet|afterDisplaceStr|26|target|targetIndex|if|617|abcdefghijklmnopqrstuvwxyz|split|for|length|indexOf|25||console|log'.split('|'),0,{}))
+        // => atiirubkmawtr
+    }
+</script>
+</html>
