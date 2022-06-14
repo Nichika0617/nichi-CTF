@@ -28,16 +28,6 @@ form{
 }
 
 
-.decrypt_hint_btn{
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #0033cc;
-  font-size: 30px;
-  display: inline-block;
-  width: 200px;
-}
-
 .link-style-btn{
   cursor: pointer;
   border: none;
