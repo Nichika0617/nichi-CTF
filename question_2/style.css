@@ -96,8 +96,10 @@ form{
 }
 /* 読み込み完了後に「loaded」を付与する */
 #loader.loaded {
-    animation: fadeOut 3s forwards;
+  transition-delay: 2s;
+  visibility: hidden;
 }
+
 
 
 .link-style-btn{
