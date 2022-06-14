@@ -39,7 +39,12 @@
         <input type="text" id="answer">
         <input type="button" value="送信" id="submit" onclick="SubmitClick();">
     </form>
-    
+
+    <div id="decrypt_hint" class="hint decrypt_hint_btn" style="display: none; text-align: center;">
+        <button class="link-style-btn" onclick="decrypt_hint()">Hint</button>
+    </div>
+
+
     <div class="hint" id="hint" style="display: none;">
         <button class="link-style-btn" onclick="firstHint()">Hint1</button>
         <button class="link-style-btn" onclick="secondHint()">Hint2</button>
@@ -65,7 +70,41 @@ document.onkeypress = function(e) {
 
     inputSeven_count=0
     const SubmitClick = ()=> {
-        function _0x2abe(){const _0x5703cc=['なんだろう・・','innerHTML','間違い！','lastMessage','hint','18842vzmaNS','30727257ouRIDb','<input\x20type=\x27text\x27\x20id=\x27answer\x27\x20placeholder\x20=\x20\x27Congratulations!\x27>','ヒント','3828060dsCVVV','happybirthday','display','value','hint4','27FpFUYZ','4smWTBX','getElementById','style','1837578oxoyBK','怪しい画像が出てきた..!','1538152JzpVJf','none','<img\x20src=\x27./message.png\x27\x20alt=\x27メッセージ\x27\x20title=\x27メッセージ\x27>','1666842izDxhg','answer','65xwSoai','secondContent','Hint','7NGGUKR','2537970bOQxSX','firstContent','6+1\x20=\x207\x20...\x20覚えやすいな〜'];_0x2abe=function(){return _0x5703cc;};return _0x2abe();}function _0x14d2(_0x24676d,_0x4c13f3){const _0x2abe0f=_0x2abe();return _0x14d2=function(_0x14d214,_0x4d5288){_0x14d214=_0x14d214-0xff;let _0x39de4b=_0x2abe0f[_0x14d214];return _0x39de4b;},_0x14d2(_0x24676d,_0x4c13f3);}const _0x429ffd=_0x14d2;(function(_0x1d3608,_0x179f4e){const _0x10267c=_0x14d2,_0x38bead=_0x1d3608();while(!![]){try{const _0x4c6122=parseInt(_0x10267c(0x10e))/0x1*(-parseInt(_0x10267c(0x11a))/0x2)+-parseInt(_0x10267c(0x107))/0x3*(parseInt(_0x10267c(0x104))/0x4)+-parseInt(_0x10267c(0x112))/0x5+parseInt(_0x10267c(0x10c))/0x6*(parseInt(_0x10267c(0x111))/0x7)+parseInt(_0x10267c(0x109))/0x8*(-parseInt(_0x10267c(0x103))/0x9)+-parseInt(_0x10267c(0x11e))/0xa+parseInt(_0x10267c(0x11b))/0xb;if(_0x4c6122===_0x179f4e)break;else _0x38bead['push'](_0x38bead['shift']());}catch(_0x7ff073){_0x38bead['push'](_0x38bead['shift']());}}}(_0x2abe,0x5c8d8));const input=document[_0x429ffd(0x105)](_0x429ffd(0x10d))[_0x429ffd(0x101)];if(input==0x7)inputSeven_count==0x0?(alert('正解..?\x20\x20新たな暗号が出てきた．'),inputSeven_count+=0x1,document['getElementById'](_0x429ffd(0x10f))[_0x429ffd(0x106)][_0x429ffd(0x100)]='',document[_0x429ffd(0x105)](_0x429ffd(0x113))[_0x429ffd(0x106)]['display']=_0x429ffd(0x10a)):alert(_0x429ffd(0x114));else{if(input=='hint'||input==_0x429ffd(0x110)||input==_0x429ffd(0x11d))document['getElementById'](_0x429ffd(0x119))[_0x429ffd(0x106)][_0x429ffd(0x100)]='',document[_0x429ffd(0x105)]('subTitle')[_0x429ffd(0x106)][_0x429ffd(0x100)]='',document[_0x429ffd(0x105)](_0x429ffd(0x113))[_0x429ffd(0x106)][_0x429ffd(0x100)]='none';else{if(input==_0x429ffd(0xff))document[_0x429ffd(0x105)]('secondContent')[_0x429ffd(0x106)][_0x429ffd(0x100)]=_0x429ffd(0x10a),alert(_0x429ffd(0x108)),document[_0x429ffd(0x105)]('inputForm')[_0x429ffd(0x116)]=_0x429ffd(0x11c),document[_0x429ffd(0x105)](_0x429ffd(0x118))[_0x429ffd(0x116)]=_0x429ffd(0x10b),document['getElementById'](_0x429ffd(0x102))['style'][_0x429ffd(0x100)]='';else input==''?alert(_0x429ffd(0x115)):alert(_0x429ffd(0x117));}}document[_0x429ffd(0x105)](_0x429ffd(0x10d))[_0x429ffd(0x101)]='';
+        const input = document.getElementById("answer").value;
+        // console.log(input)
+        if (input == 7){
+            if(inputSeven_count == 0){
+                alert("正解..?  新たな暗号が出てきた．")
+                inputSeven_count+=1
+                document.getElementById("secondContent").style.display ="";
+                document.getElementById("firstContent").style.display ="none";
+                document.getElementById("decrypt_hint").style.display="";
+            }else{
+                alert("6+1 = 7 ... 覚えやすいな〜")
+            }
+        }
+        else if(input == "hint" || input == "Hint" || input == "ヒント"){
+            document.getElementById("decrypt_hint").style.display="none";
+            document.getElementById("hint").style.display ="";
+            document.getElementById("subTitle").style.display ="";
+            document.getElementById("firstContent").style.display ="none";
+        }
+        else if(input == "happybirthday"){
+            document.getElementById("decrypt_hint").style.display="none";
+            // QRコードの処理書く
+            document.getElementById("secondContent").style.display ="none";
+            alert("怪しい画像が出てきた..!")
+            document.getElementById("inputForm").innerHTML = "<input type='text' id='answer' placeholder = 'Congratulations!'>"
+            document.getElementById("lastMessage").innerHTML ="<img src='./message.png' alt='メッセージ' title='メッセージ'>"
+            document.getElementById("hint4").style.display ="";
+        }
+        else if(input == ""){
+            alert("なんだろう・・")
+        }
+        else{
+            alert("間違い！")
+        }
+        document.getElementById("answer").value = "";
     }
 
     const firstHint = () => {
