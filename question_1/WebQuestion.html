@@ -70,41 +70,7 @@ document.onkeypress = function(e) {
 
     inputSeven_count=0
     const SubmitClick = ()=> {
-        const input = document.getElementById("answer").value;
-        // console.log(input)
-        if (input == 7){
-            if(inputSeven_count == 0){
-                alert("正解..?  新たな暗号が出てきた．")
-                inputSeven_count+=1
-                document.getElementById("secondContent").style.display ="";
-                document.getElementById("firstContent").style.display ="none";
-                document.getElementById("decrypt_hint").style.display="";
-            }else{
-                alert("6+1 = 7 ... 覚えやすいな〜")
-            }
-        }
-        else if(input == "hint" || input == "Hint" || input == "ヒント"){
-            document.getElementById("decrypt_hint").style.display="none";
-            document.getElementById("hint").style.display ="";
-            document.getElementById("subTitle").style.display ="";
-            document.getElementById("firstContent").style.display ="none";
-        }
-        else if(input == "happybirthday"){
-            document.getElementById("decrypt_hint").style.display="none";
-            // QRコードの処理書く
-            document.getElementById("secondContent").style.display ="none";
-            alert("怪しい画像が出てきた..!")
-            document.getElementById("inputForm").innerHTML = "<input type='text' id='answer' placeholder = 'Congratulations!'>"
-            document.getElementById("lastMessage").innerHTML ="<img src='./message.png' alt='メッセージ' title='メッセージ'>"
-            document.getElementById("hint4").style.display ="";
-        }
-        else if(input == ""){
-            alert("なんだろう・・")
-        }
-        else{
-            alert("間違い！")
-        }
-        document.getElementById("answer").value = "";
+        function _0x44b0(_0x12560b,_0x1fa7a7){const _0x29cdf7=_0x29cd();return _0x44b0=function(_0x44b062,_0x164a30){_0x44b062=_0x44b062-0x1d6;let _0x11b501=_0x29cdf7[_0x44b062];return _0x11b501;},_0x44b0(_0x12560b,_0x1fa7a7);}const _0x1a78d2=_0x44b0;function _0x29cd(){const _0x3e0f79=['ヒント','decrypt_hint','hint4','style','129288eBQYci','answer','338871OTUxfz','value','lastMessage','836452qocJcf','1731060asMtGG','getElementById','5036508fPuTdH','happybirthday','889105jdOhuH','怪しい画像が出てきた..!','8dqqTNr','96dSJKwG','4228416UsDoZi','inputForm','間違い！','display','subTitle','firstContent','secondContent','<img\x20src=\x27./message.png\x27\x20alt=\x27メッセージ\x27\x20title=\x27メッセージ\x27>','Hint','none','6+1\x20=\x207\x20...\x20覚えやすいな〜','hint','なんだろう・・','innerHTML'];_0x29cd=function(){return _0x3e0f79;};return _0x29cd();}(function(_0x409289,_0x2b1cb4){const _0x1ac328=_0x44b0,_0x534666=_0x409289();while(!![]){try{const _0x5eadd6=parseInt(_0x1ac328(0x1e5))/0x1+parseInt(_0x1ac328(0x1e8))/0x2+parseInt(_0x1ac328(0x1e3))/0x3*(-parseInt(_0x1ac328(0x1f0))/0x4)+parseInt(_0x1ac328(0x1e9))/0x5+parseInt(_0x1ac328(0x1eb))/0x6+parseInt(_0x1ac328(0x1ed))/0x7*(parseInt(_0x1ac328(0x1ef))/0x8)+-parseInt(_0x1ac328(0x1f1))/0x9;if(_0x5eadd6===_0x2b1cb4)break;else _0x534666['push'](_0x534666['shift']());}catch(_0x34a481){_0x534666['push'](_0x534666['shift']());}}}(_0x29cd,0x8a16e));const input=document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1e4))[_0x1a78d2(0x1e6)];if(input==0x7)inputSeven_count==0x0?(alert('正解..?\x20\x20新たな暗号が出てきた．'),inputSeven_count+=0x1,document['getElementById'](_0x1a78d2(0x1d7))[_0x1a78d2(0x1e2)][_0x1a78d2(0x1f4)]='',document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1d6))[_0x1a78d2(0x1e2)][_0x1a78d2(0x1f4)]=_0x1a78d2(0x1da),document[_0x1a78d2(0x1ea)]('decrypt_hint')['style'][_0x1a78d2(0x1f4)]=''):alert(_0x1a78d2(0x1db));else{if(input==_0x1a78d2(0x1dc)||input==_0x1a78d2(0x1d9)||input==_0x1a78d2(0x1df))document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1e0))[_0x1a78d2(0x1e2)][_0x1a78d2(0x1f4)]=_0x1a78d2(0x1da),document['getElementById'](_0x1a78d2(0x1dc))['style'][_0x1a78d2(0x1f4)]='',document['getElementById'](_0x1a78d2(0x1f5))[_0x1a78d2(0x1e2)]['display']='',document['getElementById']('firstContent')[_0x1a78d2(0x1e2)]['display']=_0x1a78d2(0x1da);else{if(input==_0x1a78d2(0x1ec))document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1e0))['style']['display']=_0x1a78d2(0x1da),document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1d7))[_0x1a78d2(0x1e2)][_0x1a78d2(0x1f4)]=_0x1a78d2(0x1da),alert(_0x1a78d2(0x1ee)),document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1f2))['innerHTML']='<input\x20type=\x27text\x27\x20id=\x27answer\x27\x20placeholder\x20=\x20\x27Congratulations!\x27>',document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1e7))[_0x1a78d2(0x1de)]=_0x1a78d2(0x1d8),document[_0x1a78d2(0x1ea)](_0x1a78d2(0x1e1))[_0x1a78d2(0x1e2)][_0x1a78d2(0x1f4)]='';else input==''?alert(_0x1a78d2(0x1dd)):alert(_0x1a78d2(0x1f3));}}document[_0x1a78d2(0x1ea)]('answer')[_0x1a78d2(0x1e6)]='';
     }
 
     const firstHint = () => {
