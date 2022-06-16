@@ -15,16 +15,16 @@ form{
 
 .question{    
     background-color: rgb(226, 225, 225);
-    width: 50%;
+    width: 70%;
     margin: 10px auto 10px auto;
-    text-align: center;
+    text-align: left;
 }
 
 .hint{
-    width: 50%;
+    width: 70%;
     margin: 10px auto 10px auto;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 
@@ -110,4 +110,7 @@ form{
     font-size: 30px;
     display: inline-block;
     width: 200px;
+    text-decoration: underline;
+    text-decoration-color: #0033cc;
+    text-align: center;
   }
